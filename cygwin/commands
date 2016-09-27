@@ -1,0 +1,5 @@
+# To convert a linux type path to windows format, use cygpath.
+# it didn't accept pipe ("which node|cygpath -w"  didn't work)
+cygpath -w "`which node`"
+alias towin="cygpath -w $1"  # should probably improve to accept a pipe, because I prefer to write: which node | towin
+
